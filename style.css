@@ -1,0 +1,287 @@
+
+/* font-family: 'Raleway', sans-serif;
+font-family: 'Roboto', sans-serif; */
+
+:root{
+    --fm: font-family: 'Raleway', sans-serif;
+    --fm_roboto: font-family: 'Roboto', sans-serif;
+    --fm-thin: 100;
+    --fm-light: 300;
+    --fm-regular: 400;
+    --fm-bold: 700;
+    --fm-black: 900;
+    --green_75: rgba(105,207,23 0.75);
+    --green_90: rgba(105,207,23 0.90);
+    --green: #62be19;
+    --green_1: #4d9c0d;
+    --green_2: #62be19;
+    --white: #ffffff;
+    --white_p: #dedede;
+    --grey: #7a7a7a;
+    --dark: #060002;
+    --black: rgba(0,0,0,0.1);
+
+
+    --col-1: calc(100% / 12 * 1 );
+    --col-2: calc(100% / 12 * 2 );
+    --col-3: calc(100% / 12 * 3 );
+    --col-4: calc(100% / 12 * 4);
+    --col-5: calc(100% / 12 * 5 );
+    --col-6: calc(100% / 12 * 6 );
+    --col-7: calc(100% / 12 * 7 );
+    --col-8: calc(100% / 12 * 8 );
+    --col-9: calc(100% / 12 * 9 );
+    --col-10: calc(100% / 12 * 10 );
+    --col-11: calc(100% / 12 * 11 );
+    --col-12: calc(100% / 12 * 12 );
+  }
+
+*{
+    margin: 0;
+    padding: 0;
+    text-decoration: none;
+    list-style: none;
+    box-sizing: border-box;
+}
+
+body{
+    font-family: var(--fm);
+    background: var(--dark);
+}
+
+.container{
+    max-width: 1140px;
+    margin: auto;
+    padding: 0 15px;
+    width: 100%;
+}
+
+.row{
+    display: flex;
+    flex-wrap: wrap;
+    margin-left: -15px;
+    margin-right: -15px;
+}
+
+.justify-content-center{
+    justify-content: center;
+}
+.justify-content-between{
+    justify-content: space-between;
+}
+.justify-content-start{
+    justify-content: flex-start;
+}
+
+.align-item-center{
+    align-items: center;
+}
+
+.flex-direction-column{
+    flex-direction: column;
+}
+
+.col-4{
+    width: var(--col-4);
+    padding: 0 15px;
+}
+.col-12{
+    width: var(--col-12);
+    padding: 0 15px;
+}
+
+
+
+header{
+    width: 100%;
+    min-height: 770px;
+    background: url(./images/bg_header.jpg) no-repeat center center / cover;
+
+}
+
+.logo{
+    font-weight: var(--fm-bold);
+    color: var(--white);
+    padding: 11px 22px;
+    background:var(--green_1) ;
+    border: 3px solid var(--green_2);
+    text-transform: uppercase;
+    box-shadow: inset 0 0 20 var(--black);
+    border-radius: 5px;
+}
+
+header nav ul{
+    display: flex;
+}
+header nav ul li a{
+    color: var(--green);
+    font-weight: var(--fm-light);
+    font-size: 20px;
+    padding: 36px 26px 30px 26px;
+    display: flex;
+}
+header nav ul li .active{
+    padding: 36px 11px 30px 11px;
+    background: green;
+    color: var(--white);
+}
+header nav ul li .active span{
+    width: 24px;
+    height: 24px;
+    border-radius: 50%;
+    background: white;
+    display: block;
+    color: var(--green);
+    margin-left: 7px;
+    text-align: center;
+
+}
+header h1{
+    color: var(--green);
+    font-weight: var(--fm-black);
+    font-size: 72px;
+    margin-top: 150px;
+    text-transform: uppercase;
+
+}
+header p:first-of-type{
+    font-size: 36px;
+    font-weight: var(--fm-regular);
+    color: var(--green);
+    margin-bottom: 30px;
+}
+header p:nth-of-type(2){
+    font-size: 18px;
+    font-weight: var(--fm-regular);
+    color:var(--white_p);
+    line-height: 25px;
+    margin-bottom: 75px;
+}
+header .header_price{
+    padding: 28px 90px;
+    background: green;
+    color:var(--white);
+    font-weight: var(--fm-thin);
+    font-size: 60px;
+    margin-right: auto;
+}
+/* /*=====Starting _Main */
+
+
+main ul{
+    margin: 50px 0 70px 0;
+    
+}
+main ul li{
+    margin: 50px;
+    margin-right: auto;
+    
+    
+}
+main ul li a{
+    color: var(--grey);
+    font-size: 20px;
+    font-weight: var(--fm-bold);
+    
+    
+}
+main ul li .active{
+    
+    color:green;
+   
+}
+main .section_img{
+    width: 100%;
+    height: 350px;
+    position: relative;
+}
+main .section_img .price{
+    position:absolute;
+    bottom: 0;
+    left: 0;
+}
+main .section_img .price span{
+    padding: 20px 60px;
+    background: green;
+    color: var(--white);
+    display: block;
+    font-size: 24px;
+    font-weight: var(--fm-regular);
+
+}
+main .section_img button{
+    width: 100%;
+    height: 100%;
+    background: green;
+    position: absolute;
+    top: 0;
+    left: 0;
+    border: none;
+    color: var(--white);
+    font-size: 24px;
+    font-weight: var(--fm-bold);
+    opacity: 0;
+    transition: 1000ms;
+}
+main .section_img:hover button{
+    opacity: 1;
+
+}
+main .section_img:hover .price{
+    opacity: 0;
+}
+main section h2{
+    color:green;
+    font-size: 24px;
+    font-weight: var(--fm-bold);
+    margin: 30px 0 13px 0;
+    text-transform: uppercase;
+}
+main section p{
+    font-size: 16px;
+    font-weight: var(--fm-regular);
+    line-height: 27px;
+    margin-bottom:50px;
+    color:var(--white_p)
+}
+/*Main _ End*/
+
+/*Section _Starting*/
+.section{
+    width: 100%;
+    height: 560px;
+    background: url('./images/STREET_07.png') no-repeat repeat center center;
+}
+section h2{
+    font-size: 36px;
+    color:green;
+    font-weight:var(--fm-bold);
+    text-transform: uppercase;
+    margin-top: 50px;
+   
+   
+
+}
+.section h2::after{
+    content: "";
+    display: block;
+    max-width: 200px;
+    height: 2px;
+    background: green;
+    margin: 20px auto 50px;
+}
+.section p{
+font-size: 18px;
+line-height: 24px;
+color:var(--white);
+font-weight: var(--fm-regular);
+
+
+}
+.section p:last-of-type{
+  margin-top: 30px;
+  margin-bottom: 100px; 
+}
+
+
+
